@@ -15,7 +15,8 @@ jobs:
         with:
           node-version: 20
       - run: npm install
-      - run: npx vite build --base=/image-makeover-muse/
+      - run: npm run build -- --base=/image-makeover-muse/
+      - run: ls -la
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
